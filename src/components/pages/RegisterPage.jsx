@@ -6,7 +6,6 @@ import RegisterForm from '../forms/RegisterForm';
 const RegisterPage = () => {
   return (
     <div>
-      <h2>Crear Cuenta</h2>
       <RegisterForm />
     </div>
   );

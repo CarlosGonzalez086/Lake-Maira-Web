@@ -1,6 +1,6 @@
-import React from 'react';
-import { useRegister } from '../../hooks/useRegister';
-import { Button, TextField, Container, Typography, Alert } from '@mui/material';
+import React from "react";
+import { useRegister } from "../../hooks/useRegister";
+import { Button, TextField, Container, Typography, Alert } from "@mui/material";
 
 const RegisterForm = () => {
   const { user, setUser, handleRegister, responseMessage } = useRegister();
@@ -55,14 +55,29 @@ const RegisterForm = () => {
             onChange={(e) => setUser({ ...user, phoneNumber: e.target.value })}
           />
         </div>
-        <Button variant="contained" color="primary" type="submit">
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          className="text-center"
+        >
           Crear Cuenta
         </Button>
         {responseMessage && (
           <div className="mt-3">
-            <Alert severity={responseMessage.includes('Error') ? 'error' : 'success'}>
+            <Alert
+              severity={responseMessage.includes("Error") ? "error" : "success"}
+            >
               {responseMessage}
             </Alert>
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              className="text-center"
+            >
+              Validar Codigo 
+            </Button>
           </div>
         )}
       </form>

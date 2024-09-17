@@ -1,24 +1,22 @@
-// src/components/shared/Header.js
-import React from 'react';
-import { Link } from 'react-router-dom';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Inicio</Link>
-          </li>
-          <li>
-            <Link to="/login">Iniciar Sesión</Link>
-          </li>
-          <li>
-            <Link to="/register">Crear Cuenta</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" >
+        <Toolbar>
+        <Button color="inherit">Iniciar Sesion</Button>
+          <Button color="inherit">Crear cuenta</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 };
 

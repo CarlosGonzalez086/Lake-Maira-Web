@@ -1,23 +1,26 @@
-// src/components/pages/HomePage.js
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Header from '../shared/Header';
+import { Card, Button } from 'react-bootstrap'; // Asegúrate de tener react-bootstrap instalado
+import { Link } from 'react-router-dom'; // Asegúrate de tener react-router-dom instalado
 
 
 const HomePage = () => {
   return (
-    <div>
-      <Header />
-      <h1>Bienvenido a nuestra Aplicación</h1>
-      <p>Por favor, inicie sesión o cree una cuenta para continuar.</p>
-      <div>
-        <Link to="/login">Iniciar Sesión</Link>
-      </div>
-      <div>
-        <Link to="/register">Crear Cuenta</Link>
-      </div>
+    <div className="d-flex justify-content-center align-items-center vh-100">
+      <Card className="p-4 shadow p-3 mb-5 bg-body rounded">
+        <div className="mb-3 text-center">
+          <h1>Laguna la Maria</h1>
+        </div>
+        <div className="d-flex flex-column align-items-center">
+          <Link to="/login" className="mb-2">
+            <Button variant="outline-primary" className="w-100">Iniciar Sesión</Button>
+          </Link>
+          <Link to="/register">
+            <Button variant="outline-primary" className="w-100">Crear Cuenta</Button>
+          </Link>
+        </div>
+      </Card>
     </div>
   );
-};
+}
 
 export default HomePage;
